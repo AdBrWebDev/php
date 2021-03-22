@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
     <?php
-        echo "<nav class='navbar navbar-expand bg-light'>
-        <ul class='navbar-nav'>
-            <li class='nav-item'><a class='nav-link' href='./loginForm.php'>sign in</a></li>
-            <li class='nav-item'><a class='nav-link' href='./signupForm.php'>sign up</a></li>
+    session_start();
+        echo "<nav class='navbar border border-success navbar-expand shadow bg-light mb-5'>
+        <ul class='navbar-nav float-right'>
+            <li class='nav-item'><a href='./shop.php' class='nav-link text-success'>shop</a></li>
+            <li class='nav-item'><a class='nav-link text-success' href='./loginForm.php'>sign in</a></li>
+            <li class='nav-item'><a class='nav-link text-success' href='./signupForm.php'>sign up</a></li>
+            <li class='nav-item'><a class='nav-link text-success' href='./components/signOut.php'>sign out</a></li>
+            <li class='nav-item'><button class='nav-link btn btn-success'>",$_SESSION["user"],"</button></li>
         </ul>
         </nav>";
     ?>
-</body>
-
-</html>

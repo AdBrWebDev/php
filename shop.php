@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./images/shop-logo.jpg">
+    <title>Shop</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 
@@ -21,13 +22,15 @@
 
         $sql = "SELECT * FROM produkty";
         $query = $connection->query($sql);
+        echo '<div class="row">';
         while($row = mysqli_fetch_assoc($query)){
             echo card($row["nazov"], $row["ks_skladom"], $row["produktImg"], $row["cena"], $row["popis"]);
         }
+        echo '</div>';
 
         function card($nazov, $warenhouse, $img, $price, $info){
             $card = "<div class='col-12 col-sm-12 col-md-12 col-xl-12 col-xl-12'>
-                <div class='card w-25 text-center p-3 shadow'>
+                <div class='card border border-success w-25 text-center p-3 shadow'>
                <img class='img-responsive p-5' src=$img alt=$nazov />
                <h4>$nazov</h4>
                <p>$info</p>
@@ -42,6 +45,7 @@
             </div></div>";
             return $card;
         }
+        include './components/footer.php';
     ?>
 </body>
 

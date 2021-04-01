@@ -21,7 +21,7 @@
             <label for="name">password</label><br>
             <input class="form-control w-50 mx-auto" type="password" name="password">
         </div>
-        <a class="mt-2" href="./signupForm.php">I have no account yet.</a>
+        <a class="mt-2" href="./signupForm.php">I've got no account yet.</a>
         <div>
             <input class="btn btn-danger mt-3" type="submit" value="login">
         </div>
